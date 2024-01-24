@@ -10,11 +10,8 @@ TODO:
 
 3. Function 2 a program to output all parrent combinations 
 
-4. Function 3 Output fastest path to breed the specified pal based on the number of the existing pal
+4. Function 3 Output best solution to breed the specified pal based on pals you have
 
+Credit:
 
-
-**11      11    12   1370        Jolthog     雷棘鼠       5.0**
-17      17    17   1380       Depresso     瞅什魔       5.0
-
-1500  +  1360  =  1430.0    3  +  12B  =  4 翠叶鼠 Lifmunk
+Thanks to **u/blahable** for exploring the breeding mechanism and data in this [post](https://www.reddit.com/r/Palworld/comments/19d98ws/spreadsheet_all_breeding_combinations_datamined/)
