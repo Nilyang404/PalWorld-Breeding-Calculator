@@ -12,9 +12,3 @@ TODO:
 
 4. Function 3 Output fastest path to breed the specified pal based on the number of the existing pal
 
-
-
-**11      11    12   1370        Jolthog     雷棘鼠       5.0**
-17      17    17   1380       Depresso     瞅什魔       5.0
-
-1500  +  1360  =  1430.0    3  +  12B  =  4 翠叶鼠 Lifmunk
