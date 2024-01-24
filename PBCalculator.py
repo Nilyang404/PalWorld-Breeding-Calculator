@@ -4,11 +4,15 @@
 # 2024/01/23
 # #############################################
 import pandas as pd
+import json
 
 class PBCalculator:
     def __init__(self):
         self.data = pd.read_csv("data.csv")
         self.unique_combo = pd.read_csv("unique_combo.csv")
+        with open("full_combo.json", "r") as file:
+            self.full_combo = json.load(file)
+
 
 # general search info
     def name_cn_to_no(self,name):
@@ -72,16 +76,23 @@ class PBCalculator:
             child_name = self.no_to_name_en(result)
 
             # when child in unique list but parent are not, use the second result
-            if child_name in self.unique_combo['child'].values:
-                if not self.is_unique_combo(no_1, no_2 ,result):
-                    result = df_sorted.iloc[1]["NO"]
+            index = 0
+            while child_name in self.unique_combo['child'].values:
+                if not self.is_unique_combo(no_1, no_2, result):
+                    index += 1
+                    result = df_sorted.iloc[index]["NO"]
+                    child_name = self.no_to_name_en(result)
+                    #print(result)
+            # if child_name in self.unique_combo['child'].values:
+            #     if not self.is_unique_combo(no_1, no_2 ,result):
+            #         result = df_sorted.iloc[1]["NO"]
+
 
             # debug info
-            print(df_sorted)
+            # print(df_sorted)
             # print(power_1," + ", power_2," = ", power_avg,"   ",end="")
             # print(no_1," + ", no_2," = ",result,self.no_to_name_cn(result),self.no_to_name_en(result))
             return result
-
     def get_breed_result_by_name_cn(self,name_cn_1,name_cn_2):
         no_1 = self.name_cn_to_no(name_cn_1)
         no_2 = self.name_cn_to_no(name_cn_2)
@@ -92,9 +103,13 @@ class PBCalculator:
         no_2 = self.name_en_to_no(name_en_2)
         no = self.get_bread_result(no_1,no_2)
         return self.no_to_name_en(no)
+    def get_parents_by_child(self,no):
+        return self.full_combo[no]
+
 if __name__ == '__main__':
 
     cal = PBCalculator()
-    print(cal.get_breed_result("45","70"))
+    print(cal.get_breed_result("1","111"))
     # for i in cal.data["NO"]:
     #     cal.get_breed_result("3", str(i))
+    #print(cal.get_parents_by_child("111"))
