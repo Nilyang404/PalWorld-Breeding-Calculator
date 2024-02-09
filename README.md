@@ -1,6 +1,6 @@
-# Pal-Breedding-Calculator
+# Pal-Breeding-Calculator
 
-A  Palworld-Breedding-Calculator
+A  Palworld-Breeding-Calculator
 
 #### TODO:
 
