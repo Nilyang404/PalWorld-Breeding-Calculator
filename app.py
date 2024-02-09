@@ -68,17 +68,17 @@ if __name__ == '__main__':
     tab3 = ttk.Frame(notebook)
 
     # table content
-    notebook.add(tab1, text='预测子女')
-    notebook.add(tab2, text='父母组合')
-    notebook.add(tab3, text='繁殖方案')
+    notebook.add(tab1, text='predict children')
+    notebook.add(tab2, text='want a child')
+    notebook.add(tab3, text='breeding solution ')
     notebook.pack(expand=True, fill="both")
 
     # page 1 content
     combo_1_tab1 = ttk.Combobox(tab1, values=pal_list_cn)
     plus_label = tk.Label(tab1, text="+")
     combo2_tab1 = ttk.Combobox(tab1, values=pal_list_cn)
-    result_label = tk.Label(tab1, text="预测结果:")
-    result_output_lable= tk.Label(tab1, text="NO.1 绵悠悠")
+    result_label = tk.Label(tab1, text="predict result:")
+    result_output_lable= tk.Label(tab1, text="NO.1 ##")
 
     # defalut values
     combo_1_tab1.set(pal_list_cn[0])
@@ -98,7 +98,7 @@ if __name__ == '__main__':
 
     # page 2 content
     combo_3_tab2 = ttk.Combobox(tab2, values=pal_list_cn)
-    result_label_tab_2 = tk.Label(tab2, text="父母组合(顺序不分先后):")
+    result_label_tab_2 = tk.Label(tab2, text="parents(consequences does not matter):")
     result_output_lable_tab_2= tk.Text(tab2,
                                        borderwidth=2,
                                        width=250,
@@ -118,7 +118,7 @@ if __name__ == '__main__':
 
     # page 3 content
 
-    content_label = tk.Label(tab3, text="施工中...")
+    content_label = tk.Label(tab3, text="developing...")
     content_label.pack(pady=(180, 10))
 
     root.mainloop()
