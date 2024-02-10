@@ -2,7 +2,7 @@
 
 A  Palworld-Breeding-Calculator
 
-Most people don't care what they get when two pals are bred, as there are close to 20,000 combinations. People are more concerned about: when I want a certain pal, how do I get it. The second function can help give all the parent combinations of a specific pal.
+Most people don't care what they get when two pals are bred as there are close to 20,000 combinations. People are more concerned about: when I want a certain pal, how do I get it. The second function can help give all the parent combinations of a specific pal.
 
 ![](https://cdn.mos.cms.futurecdn.net/jrsca3q3Ki7T8iJMUfuwvP-650-80.jpg))
 #### Todo:
